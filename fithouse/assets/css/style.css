@@ -1,0 +1,890 @@
+:root {
+--white-color:#FFFF;
+--black-color:#000000;
+--blue-color:#044C98;
+--DarkBlue-color: #1D2C4B;
+--LightBlue-color:#33c8ff;
+--greee-color:#04B486;
+--pink-colors:#FF00FF;
+--light-gray-color:#E9E9E9;
+--gap: 3rem;
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Serif 4", serif;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--white-color);
+  background-color: var(--black-color);
+
+  animation: fadein 4s; /* Padrão */
+  -webkit-animation: fadein 4s; /* Webkit */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* IE */
+}
+
+@keyframes fadein {
+  from { opacity: 0.2; }
+  to { opacity: 1; } /* Padrão */
+}
+    
+h1, h2, h3, h4, h5, h6{
+  font-family: "Source Serif 4", serif;
+  font-weight: bold;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+}
+  
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+  
+  h2 {
+  font-size: 4rem;
+}
+  
+  h3 {
+  font-size: 3.5rem;
+}
+  
+h4 {
+  font-size: 3rem;
+}
+  
+h5 {
+  font-size: 2.5rem;
+}
+  
+h6 {
+  font-size: 2rem;
+}
+
+p{
+  line-height: 4rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+}
+
+a{
+  text-decoration: none;
+}
+  
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+  
+/*Menu*/
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--DarkBlue-color);
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  z-index: 2;
+}
+
+.menu img{
+  width: 20rem;
+}
+
+.menu h1 a{
+  color: inherit;
+}
+
+.menu ul{
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a{
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.menu ul li a::after{
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--pink-colors);
+  transition: all 300ms ease-in-out
+}
+
+.menu ul li a:hover::after{
+  width: 50%;
+  left: 25%;
+}
+
+.menu-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.close-menu{
+  display: none;
+}
+ 
+/*Princípal*/
+.main{  
+  display: flex; 
+  background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/fundo1.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.container{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1{
+  font-size: 5rem;
+  color: var(--LightBlue-color);
+  box-shadow: 0.1px 0.1px 1rem var(--white-color);
+  margin-top: 20rem;
+  padding: 0.2rem 2rem;
+}
+
+.container p{
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-top: 2rem;
+}
+
+
+/*carrosel*/
+.owl-theme {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+} 
+ 
+.titulo_modalidades{
+  padding-top: 15rem;
+}
+
+.carrosel-filmes h2{
+ text-align: center;
+ font-size: 6rem;
+}
+
+.box-filme{
+  height: 25rem;
+  display: block;
+  cursor: pointer;
+  border: solid 1.5px var(--light-gray-color);
+}
+
+.box-filme img{
+  width: 100%;
+  height: 18rem;
+}
+
+.box-filme p{
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/*serviços o que fazemos*/
+.our-services{
+  display: flex;
+  flex-direction: column;
+   
+  background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/fundo1.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.our-services h2{
+  text-align: center;
+  padding-top: 12.5rem;
+}
+
+.services{
+  margin: 2.5rem 0rem;
+  padding: 0rem 6rem 2rem 6rem;
+}
+
+.services h3{
+  padding: 1rem 0;
+  font-size: 3.5rem;
+  color: var(--pink-colors);
+}
+
+.services h4{
+  padding: 5rem 0rem 2rem 0rem;
+  font-size: 3rem;
+  color: var(--LightBlue-color);
+}
+
+.services p{
+  font-size: 2.5rem;
+}
+
+.services li{
+  font-size: 3rem;
+}
+
+.services-two{
+  border-top: 0.1rem solid var(--light-gray-color);
+}
+
+.services-two h3{
+  margin-top: 2rem;
+}
+
+
+/*serviços melhor idade*/
+.best-age{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  
+  padding-top: 5rem;
+  gap: var(--gap); 
+}
+
+.services_three h2{
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.best-age img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.best-age p{
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+}
+
+/*Galeria*/
+.gallery{
+  width: 100%;
+}
+
+.gallery-content{
+  padding-top: 12rem;
+}
+
+.grid-content{
+  background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/fundo1.jpg');
+  background-size: cover;
+  background-position: center right;
+
+  border: 0.5rem solid var(--light-gray-color);
+  margin-top: 1rem;
+}
+
+.header-gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-gallery img{
+  width: 60%;
+  border-radius: 4rem;
+  margin-top: 3rem;
+}
+
+.header-gallery h2{
+  margin-top: 5rem
+}
+
+.grid-gallery{ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid img{
+  width: 100%;
+  height: 36rem;
+  padding: 3rem 4rem;
+  border-radius: 50%;
+}
+
+.grid img{
+  transition: all 300ms ease-in-out;
+}
+
+.grid img:hover{
+  transform: translate(-2%, 0) scale(1.2);
+}
+
+/*contato*/
+.main-address{
+  padding-top: 12rem;
+}
+
+.address{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.photo-contact img{
+  width: 90%;
+  border-radius: 20px;
+}
+
+.contact-two .invista-em-voce{
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: var(--LightBlue-color);
+  line-height: 6rem;
+}
+
+.contact-two .contato{
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-two .telefone {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--pink-colors);
+}
+
+.contact-two p{
+  line-height: 2.8rem;
+  margin-top: 2rem;
+}
+
+.botao-rs{
+  display: inline-flex;
+  padding: 1.8rem;
+  border-radius: 100vw;
+  width:auto;  
+  margin: 5rem 1rem 0rem 0rem;
+}
+
+.botao-rs a { 
+  text-decoration:none; 
+  display: inherit;
+  color: var(--white-color);
+}
+
+.instagram{
+  background:hsl(0 0% 10%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.instagram img{
+  width: 3rem;
+  margin-left: -0.1rem;
+}
+
+.facebook{
+  background:#3b5998;
+}
+
+.facebook img{
+  width: 3rem;
+  margin-left: -0.1rem;
+}
+
+.whatsapp{
+  background:#15cc31;
+}
+
+.whatsapp img{
+  width: 3rem;
+  margin-left: -0.1rem;
+}
+
+.botao-rs:hover{
+  cursor:pointer;
+}
+
+.botao-rs i { 
+  width: 25px;
+  height: 25px;
+  line-height: 31px;
+  font-size: 1.5em;
+}
+
+.botao-rs span{
+  display: inline-block;
+  white-space: nowrap;
+  width: 0px;
+  overflow: hidden;
+  transition: 350ms ease;
+
+}
+
+.botao-rs:hover span{
+  width:100px;
+  margin-left: 0.8rem;
+}
+
+/*Propaganda Tm Ebooks*/
+@keyframes btn-pisca {
+   0% { opacity: 0; }
+   50% { opacity: 0.5; }
+   100% { opacity: 1; }
+}
+
+.tm_ebooks{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-top: 0.5rem solid var(--light-gray-color);
+  border-bottom: 0.5rem solid var(--light-gray-color);
+  padding: 4rem 0rem;
+}
+
+.tm_ebooks h2{
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.btn-pisca {
+ background-color: var(--blue-color);
+ color:var(--white-color);
+ padding: 0.6em 0.8em;
+ display: inline-block;
+ text-decoration: none;
+ box-shadow: 1rem 0.5rem 3rem var(--LightBlue-color);
+ border-radius: 2rem; 
+ -webkit-animation: btn-pisca 3s linear infinite;
+ -moz-animation: btn-pisca 3s linear infinite;
+ -ms-animation: btn-pisca 3s linear infinite;
+ -o-animation: btn-pisca 3s linear infinite;
+ animation: btn-pisca 3s linear infinite;
+}
+
+.btn-pisca:hover{
+  background-color: var(--light-gray-color);
+  color:var(--blue-color);
+}
+
+/*rodapé*/
+.rodape{
+  margin-top: -2rem;
+  text-align: center;
+}
+
+.rodape h2{
+  font-size: 1.8rem;
+}
+
+.rodape a{
+  color: var(--light-gray-color);
+}
+
+.rodape a:hover{
+  color: var(--LightBlue-color);
+}
+
+/*Responsive*/
+@media (min-width: 890px) and (max-width: 1099px){
+  .best-age{
+    grid-template-columns: 1fr;
+  }
+  .best-age img{
+    width: 75%;
+  }   
+  .best-age p{
+    line-height: 3.5rem;
+    font-size: 3rem;
+  }
+
+  .address{
+    gap: 2rem;
+  }
+
+  .contact-two .invista-em-voce{
+    font-size: 3rem;
+    line-height: 4.8rem;
+  }
+}
+
+@media (min-width: 699px) and (max-width: 999px)   
+      and (min-height: 1000px) and (max-height: 1300px) {
+  
+  .slideshow-container {
+    max-width: 80% !important; 
+    position: relative;
+    margin: auto;
+  }
+
+  .slideshow-container img{
+    height: 45rem !important;
+  }
+}
+
+@media (min-width: 890px){
+  .menu-responsivo{
+    display: none;
+  }
+  .slider-content{
+    display: none;
+  }
+}
+
+@media (max-width: 890px){
+  .menu-responsivo{
+    position: fixed;
+    background: var(--DarkBlue-color);
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-responsivo img{
+    width: 30%;
+  }
+
+  .menu{
+    bottom: 0;
+    text-align: center;
+    z-index: 4;
+  }
+
+  .menu-content, .menu-content ul{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .menu-content{
+    min-height: 100vh;
+  }
+
+  .close-menu-label::after{
+    content: '☰';
+    position: fixed;
+    z-index: 5;
+    right: 0;
+     
+    color: var(--white-colors);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 2rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked~.menu{
+      display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after{
+    display: block;
+    content: 'x';
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* princípal */
+  .container h1{
+    font-size: 4rem;
+    margin-top: 18rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  /* modalidades */
+  .container{
+    margin-top: 2rem;
+  }
+
+  .carrosel-filmes{
+   margin-top: -8rem;
+ }   
+ 
+  .titulo_modalidades{
+   padding-top: 20rem;
+ }
+
+  .carrosel-filmes h2{
+   font-size: 4rem;
+ }
+
+  .our-services{
+    margin-top: 10rem;
+  }
+
+  .our-services h2{
+    font-size: 2.6rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
+  }
+  
+  .services{
+    padding: 0rem 2rem;
+  }
+
+
+  .services h3{
+    font-size: 2.6rem;
+  }
+   
+  .services h4{
+    font-size: 2.8rem;
+    padding-bottom: 2.5rem;
+  }
+   
+  .services p{
+    font-size: 2.2rem;
+  }
+   
+  .services li{
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  .services-two h3{
+    margin-top: 2.6rem;
+  }
+  
+  /* serviços melhor idade */
+  .best-age{
+    grid-template-columns: 1fr;
+  }
+   
+  .services_three h2{
+    font-size: 3rem;
+  }
+
+  .best-age img{
+    width: 80%;
+  }
+   
+  .best-age p{
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+
+  .gallery{
+    
+    width: 100%;
+  }
+
+  .gallery-content{
+    display: none;
+  }
+
+  .slider-content h2{
+    font-size: 3rem;
+    text-align: center;
+    margin: 4rem 0rem 5rem 0rem;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .slideshow-container img{
+    width: 35rem;
+    height: 30rem;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -2.2rem;
+    padding: 1rem;
+    color: var(--black-color);
+    background-color: rgba(243, 242, 242, 0.8);
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.6s ease;
+    border-radius: 0 0.3rem 0.3rem 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    color: var(--light-gray-color);
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: var(--black-color);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.2rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+  }
+
+  /* contato */
+  .main-address{
+    padding-top: 8rem;
+  }
+      
+  .address{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+      
+ .photo-contact img{
+    width: 50%;
+  }
+      
+  .contact-two .invista-em-voce{
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+      
+  .contact-two .contato{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+      
+  .contact-two .telefone {
+    font-size: 3.5rem;
+  }
+      
+  .contact-two p{
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin-top: 2rem;
+  }
+      
+  .botao-rs{
+    margin: 3rem 1rem 0rem 1rem;
+  }
+            
+  
+  /*Tm Ebooks*/
+         
+  .tm_ebooks{
+    margin-top: 4rem;
+  }
+      
+  .tm_ebooks h2{
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+      
+  .btn-pisca {
+    padding: 0.4em;
+  }
+    
+  /*rodapé*/
+  .rodape h2{
+    font-size: 1.5rem;
+  }
+     
+  .rodape a{
+    color: var(--light-gray-color);
+  }
+    
+  .rodape a:hover{
+    color: var(--LightBlue-color);
+  }
+
+}
+
+@media (max-width: 410px){
+    /* princípal */
+      .container h1{
+      font-size: 2rem;
+    }
+
+    .services_three h2{
+      font-size: 2.8rem;
+    }
+
+    .contact-two .invista-em-voce{
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+        
+    .contact-two .contato{
+      font-size: 2.2rem;
+    }
+        
+    .contact-two .telefone {
+      font-size: 3rem;
+    }
+        
+    .contact-two p{
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      margin-top: 2rem;
+    }
+
+}
